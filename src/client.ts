@@ -3,6 +3,7 @@ import "./styles.css";
 import PartySocket from "partysocket";
 
 declare const PARTYKIT_HOST: string;
+declare const PARTYKIT_ROOM: string;
 
 let pingInterval: ReturnType<typeof setInterval>;
 
@@ -19,7 +20,7 @@ function add(text: string) {
 // It handles reconnection logic, buffering messages while it's offline, and more.
 const conn = new PartySocket({
   host: PARTYKIT_HOST,
-  room: "my-new-room",
+  room: PARTYKIT_ROOM,
 });
 
 // You can even start sending messages before the connection is open!
