@@ -1,10 +1,12 @@
 {
   "name": "little-fern-party",
-  "version": "0.0.0",
-  "private": true,
+  "description": "A partykit project for the Little Fern Application Suite",
+  "author": "Rohit Khanduri <https://github.com/rohit1901/>",
+  "version": "1.0.0",
   "scripts": {
     "dev": "partykit dev --live",
-    "deploy": "partykit deploy"
+    "deploy": "partykit deploy",
+    "deploy:prod": "partykit deploy --with-vars"
   },
   "dependencies": {
     "jose": "^5.2.3",
