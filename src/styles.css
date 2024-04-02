@@ -106,7 +106,6 @@ h6 {
     transition: 0.5s;
     background-size: 200% auto;
     color: #7743db;
-    box-shadow: 0 0 5px #eee;
     border-radius: 10px;
     display: block;
 }
@@ -141,7 +140,6 @@ h6 {
     transition: 0.5s;
     background-size: 200% auto;
     color: #7743db;
-    box-shadow: 0 0 5px #eee;
     border-radius: 10px;
     display: block;
 }
@@ -166,58 +164,4 @@ h6 {
 }
 
 #app {
-}
-
-/* Primary Button */
-
-.btn-grad {
-    background-image: linear-gradient(
-        to right,
-        #000046 0%,
-        #1cb5e0 51%,
-        #000046 100%
-    );
-    margin: 10px;
-    padding: 15px 45px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;
-    box-shadow: 0 0 5px #eee;
-    border-radius: 10px;
-    display: block;
-}
-
-.btn-grad:hover {
-    background-position: right center; /* change the direction of the change here */
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Secondary Button */
-
-.btn-grad-2 {
-    background-image: linear-gradient(
-        to right,
-        #f0f2f0 0%,
-        #000c40 51%,
-        #f0f2f0 100%
-    );
-    margin: 10px;
-    padding: 15px 45px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;
-    box-shadow: 0 0 5px #eee;
-    border-radius: 10px;
-    display: block;
-}
-
-.btn-grad-2:hover {
-    background-position: right center; /* change the direction of the change here */
-    color: #fff;
-    text-decoration: none;
 }
