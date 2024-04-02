@@ -1,29 +1,49 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>PartyKit: Everything's better with friends!</title>
+    <title>
+        Little Fern PartyKit: A PartyKit Server for the Little Fern
+        Application Suite
+    </title>
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <!-- Primary Meta Tags -->
-    <meta name="title" content="PartyKit" />
-    <meta name="description" content="Everything's better with friends!" />
-    <meta name="author" content="PartyKit" />
+    <meta name="title" content="Little Fern PartyKit" />
+    <meta name="description" content="A PartyKit Server for the Little Fern Application Suite" />
+    <meta name="author" content="Rohit Khanduri" />
     <!-- Theme Colour -->
     <meta name="theme-color" content="#ffffff" />
-
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+    <!-- Application Styles -->
     <link rel="stylesheet" href="/normalize.css" />
     <link rel="stylesheet" href="/dist/client.css" />
-  </head>
-  <body>
-    <div id="app">
-      <h1>🎈 Welcome to PartyKit!</h1>
-    </div>
-    <script type="module" src="/dist/client.js"></script>
-  </body>
+</head>
+
+<body>
+    <div id="app" class="flex--align-center flex--justify-center height--full-screen flex flex--column outfit">
+        <h1 class="outfit outfit--bold color--white center--content">
+            🎈 Welcome to Little Fern PartyKit!
+        </h1>
+        <h3 class="outfit outfit--medium color--white center--content">
+            Access the Little Fern Application Suite here
+        </h3>
+        <div class="flex flex--row button--group margin--top outfit ">
+            <a href="https://www.littlefern.in" class="outfit button button--primary button--small margin--right">
+                <span class="margin--right">🌐</span>
+                Little Fern Website
+            </a>
+            <a href="https://www.admin.littlefern.in" class="outfit button button--secondary button--small">
+                <span class="margin--right">🔧</span>
+                Little Fern Admin
+            </a>
+        </div>
+</body>
+
 </html>

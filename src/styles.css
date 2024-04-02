@@ -1,16 +1,15 @@
-/* 
-  We've already included normalize.css. 
+/*
+  We've already included normalize.css.
 
-  But we'd like a modern looking boilerplate. 
-  Clean type, sans-serif, and a nice color palette. 
-  
+  But we'd like a modern looking boilerplate.
+  Clean type, sans-serif, and a nice color palette.
+
 */
 
 body {
-    font-family: sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: #333;
+    background-color: #3b3486;
 }
 
 h1,
@@ -26,6 +25,199 @@ h6 {
     margin-bottom: 0.5rem;
 }
 
+.outfit {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.outfit--thin {
+    font-weight: 100;
+}
+.outfit--extra-light {
+    font-weight: 200;
+}
+.outfit--light {
+    font-weight: 300;
+}
+.outfit--regular {
+    font-weight: 400;
+}
+.outfit--medium {
+    font-weight: 500;
+}
+.outfit--semi-bold {
+    font-weight: 600;
+}
+.outfit--bold {
+    font-weight: 700;
+}
+.outfit--extra-bold {
+    font-weight: 800;
+}
+.outfit--black {
+    font-weight: 900;
+}
+.color--white {
+    color: #fff;
+}
+.flex {
+    display: flex;
+}
+.flex--column {
+    flex-direction: column;
+}
+.flex--row {
+    flex-direction: row;
+}
+.flex--wrap {
+    flex-wrap: wrap;
+}
+.flex--nowrap {
+    flex-wrap: nowrap;
+}
+.flex--align-center {
+    align-items: center;
+}
+.flex--justify-center {
+    justify-content: center;
+}
+.center--content {
+    margin: 0 auto;
+}
+.height--full-screen {
+    height: 100vh;
+}
+
+.button--group {
+    display: flex;
+    justify-content: center;
+}
+.button {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button--primary {
+    background-color: #ffe9b1;
+    margin: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #7743db;
+    box-shadow: 0 0 5px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.button--primary:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.button--large {
+    font-size: 1.25rem;
+}
+.button--small {
+    font-size: 0.75rem;
+}
+.button--disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+.button--disabled:hover {
+    background-color: #3a1c71;
+    color: #fff;
+}
+
+.button--secondary {
+    background-color: #fcfdf2;
+    margin: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #7743db;
+    box-shadow: 0 0 5px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.button--secondary:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.margin--right {
+    margin-right: 1rem;
+}
+.margin--left {
+    margin-left: 1rem;
+}
+.margin--top {
+    margin-top: 1rem;
+}
+.margin--bottom {
+    margin-bottom: 1rem;
+}
+
 #app {
-    padding: 1rem;
+}
+
+/* Primary Button */
+
+.btn-grad {
+    background-image: linear-gradient(
+        to right,
+        #000046 0%,
+        #1cb5e0 51%,
+        #000046 100%
+    );
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 5px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Secondary Button */
+
+.btn-grad-2 {
+    background-image: linear-gradient(
+        to right,
+        #f0f2f0 0%,
+        #000c40 51%,
+        #f0f2f0 100%
+    );
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 5px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-grad-2:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
 }

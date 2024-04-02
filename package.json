@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "partykit dev --live",
     "deploy": "partykit deploy",
-    "deploy:prod": "partykit deploy --with-vars"
+    "deploy:prod": "partykit deploy --with-vars",
+    "build:ts": "tsc",
+    "build:css": "sass --source-map --load-path=node_modules src/styles.css public/dist/client.css",
+    "copy:files": "ncp src/assets dist/assets",
+    "build": "npm run build:ts && npm run build:css"
   },
   "dependencies": {
     "jose": "^5.2.3",
@@ -14,7 +18,9 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
+    "ncp": "^2.0.0",
     "partykit": "^0.0.100",
-    "typescript": "^5.4.2"
+    "sass": "^1.72.0",
+    "typescript": "^5.4.3"
   }
 }
