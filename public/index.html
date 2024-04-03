@@ -28,15 +28,17 @@
 </head>
 
 <body>
+    <div id="balloon-container">
+    </div>
     <div id="app" class="flex--align-center flex--justify-center height--full-screen flex flex--column outfit">
-        <h1 class="outfit outfit--bold color--white center--content">
-            🎈 Welcome to Little Fern PartyKit!
+        <h1 class="outfit--bold color--white center--content">
+            🎈 Welcome to the Little Fern Party!
         </h1>
         <img src="https://d28xxvmjntstuh.cloudfront.net/images/bright-logo.png"
             class="img--small margin--top animate__animated" id="logo">
         <div class="flex flex--row button--group margin--top outfit">
             <a href="https://www.littlefern.in"
-                class="outfit button button--primary button--small margin--right outfit--bold flex flex--wrap flex--align-center">
+                class="button button--primary button--small margin--right outfit--bold flex flex--wrap flex--align-center">
                 <span class="margin--right">
                     <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
@@ -46,10 +48,10 @@
                             clip-rule="evenodd" />
                     </svg>
                 </span>
-                <span>Little Fern Website</span>
+                <span class="mobile--hide">Little Fern Website</span>
             </a>
             <a href="https://www.admin.littlefern.in"
-                class="outfit button button--secondary button--small margin--right outfit--bold flex flex--wrap flex--align-center">
+                class="button button--secondary button--small margin--right outfit--bold flex flex--wrap flex--align-center">
                 <span class="margin--right">
                     <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -61,9 +63,62 @@
                             d="M6 9h.01v.01H6V9Zm0 3h.01v.01H6V12Zm0 3h.01v.01H6V15Zm3-6h.01v.01H9V9Zm0 3h.01v.01H9V12Zm3-3h.01v.01H12V9Zm0 3h.01v.01H12V12Zm3 0h.01v.01H15V12Zm3 0h.01v.01H18V12Zm0 3h.01v.01H18V15Zm-3-6h.01v.01H15V9Zm3 0h.01v.01H18V9Z" />
                     </svg>
                 </span>
-                <span>Little Fern Admin</span>
+                <span class="mobile--hide">Little Fern Admin</span>
             </a>
         </div>
+        <div class="footer fixed--footer">
+            <div class="footer--text flex flex--between">
+                <span>© 2024 Little Fern Pre-School and Day-Boarding</span>
+                <a href="https://www.littlefern.in/contact" class="margin--left">Contact</a>
+            </div>
+        </div>
 </body>
+<script>
+    const balloonContainer = document.getElementById("balloon-container");
+
+    function random(num) {
+        return Math.floor(Math.random() * num);
+    }
+
+    function getRandomStyles() {
+        var r = random(255);
+        var g = random(255);
+        var b = random(255);
+        var mt = random(200);
+        var ml = random(50);
+        var dur = random(5) + 5;
+        return `
+  background-color: rgba(${r},${g},${b},0.7);
+  color: rgba(${r},${g},${b},0.7);
+  box-shadow: inset -7px -3px 10px rgba(${r - 10},${g - 10},${b - 10},0.7);
+  margin: ${mt}px 0 0 ${ml}px;
+  animation: float ${dur}s ease-in infinite
+  `;
+    }
+
+    function createBalloons(num) {
+        for (var i = num; i > 0; i--) {
+            var balloon = document.createElement("div");
+            balloon.className = "balloon";
+            balloon.style.cssText = getRandomStyles();
+            balloonContainer.append(balloon);
+        }
+    }
+
+    function removeBalloons() {
+        balloonContainer.style.opacity = 0;
+        setTimeout(() => {
+            balloonContainer.remove()
+        }, 500)
+    }
+
+    window.addEventListener("load", () => {
+        createBalloons(30)
+    });
+
+    window.addEventListener("click", () => {
+        removeBalloons();
+    });
+</script>
 
 </html>
