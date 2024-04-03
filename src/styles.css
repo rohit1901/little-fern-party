@@ -81,6 +81,9 @@ h6 {
 .flex--justify-center {
     justify-content: center;
 }
+.flex--baseline {
+    align-items: baseline;
+}
 .center--content {
     margin: 0 auto;
 }
@@ -107,12 +110,12 @@ h6 {
     background-size: 200% auto;
     color: #7743db;
     border-radius: 10px;
-    display: block;
 }
 
 .button--primary:hover {
     background-position: right center; /* change the direction of the change here */
     color: #fff;
+    background-color: #7469b6;
     text-decoration: none;
 }
 
@@ -141,12 +144,12 @@ h6 {
     background-size: 200% auto;
     color: #7743db;
     border-radius: 10px;
-    display: block;
 }
 
 .button--secondary:hover {
     background-position: right center; /* change the direction of the change here */
     color: #fff;
+    background-color: #7469b6;
     text-decoration: none;
 }
 
@@ -161,6 +164,25 @@ h6 {
 }
 .margin--bottom {
     margin-bottom: 1rem;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.img--x-small {
+    width: 50px;
+}
+.img--small {
+    width: 100px;
+}
+.img--medium {
+    width: 200px;
+}
+.img--large {
+    width: 300px;
+}
+.img--x-large {
+    width: 400px;
 }
 
 #app {
