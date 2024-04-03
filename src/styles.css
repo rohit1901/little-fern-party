@@ -232,11 +232,11 @@ hr.divider {
 
 #app {
     position: relative;
-    * {
-        font-family: "Outfit", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-    }
+}
+#app * {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 /*
