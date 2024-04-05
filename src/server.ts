@@ -18,15 +18,16 @@ export default class Server implements Party.Server {
     // Check if the request is authorized
     try {
       const url = new URL(req.url);
-      const ISSUER = url.hostname === "localhost:1999" ? process.env.NEXT_PUBLIC_AUTH0_ISSUER_DEV : process.env.NEXT_PUBLIC_AUTH0_ISSUER;
+      const ISSUER =
+        url.hostname === "localhost"
+          ? process.env.NEXT_PUBLIC_AUTH0_ISSUER_DEV
+          : process.env.NEXT_PUBLIC_AUTH0_ISSUER;
       const token = url.searchParams.get("token");
       if (!token) {
         return new Response("Unauthorized", { status: 401 });
       }
       const JWKS = jose.createRemoteJWKSet(
-        new URL(
-          `${ISSUER}/.well-known/jwks.json`,
-        ),
+        new URL(`${ISSUER}/.well-known/jwks.json`),
       );
 
       const { payload: user } = await jose.jwtVerify(token, JWKS, {
